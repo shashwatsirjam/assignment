@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>short assignment</title>
+    <link rel="icon" href="./resources/cropped-mascot_logo-32x32.png" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="virtual_demo">
+        <h2 class="heading">
+            Virtual Demo
+        </h2>
+        <div class="boxes">
+            <div class="box1">
+                <h2>Click on the device to start demo</h2>
+            </div>
+            <div class="box2">
+                <h2 class="article" id="article_name">
+                    SPIKEBOT
+                </h2>
+                <br>
+                <p class="article_about">
+                    Accessible from any location through Wi-Fi and mobile data
+                </p>
+            </div>
+        </div>
+
+
+    <div class="row">
+        <div class="column clickimage" style="background-color:rgb(255, 255, 255);">
+          
+         <img src="./resources/final_3d (1).webp" alt="Workplace" usemap="#workmap" class="mapi">
+          <map name="workmap">
+            <area shape="circle" coords="450,105,49"  id="AC"                   onmouseover = "upDate(this)" onmouseout = "unDo()">
+            <area shape="circle" coords="264,130,49"  id="LIGHT"                onmouseover = "upDate2(this)" onmouseout = "unDo2()">
+            <area shape="circle" coords="84,215,49"   id="CAMERA"               onmouseover = "upDate3(this)" onmouseout = "unDo3()">
+            <area shape="circle" coords="709,54,49"   id="CURTAIN_SENSOR"       onmouseover = "upDate4(this)" onmouseout = "unDo4()">
+            <area shape="circle" coords="912,125,49"  id="TEMPRATURE_SENSOR"    onmouseover = "upDate5(this)" onmouseout = "unDo5()">
+            <area shape="circle" coords="1087,486,49" id="SMOKE_SENSOR"         onmouseover = "upDate6(this)" onmouseout = "unDo6()">
+            <area shape="circle" coords="936,644,49"  id="SWITCHBOARD"          onmouseover = "upDate7(this)" onmouseout = "unDo7()">
+            <area shape="circle" coords="382,720,49"  id="DOOR_LOCK"            onmouseover = "upDate8(this)" onmouseout = "unDo8()">
+            <area shape="circle" coords="159,614,49"  id="GEYSER"               onmouseover = "upDate9(this)" onmouseout = "unDo9()">
+          </map>
+
+        </div>
+        
+        <div class="column"  id="banner">
+            
+            <div id = "mic" class="imge">
+                <img src="./resources/home-page-banner.webp" alt="banner">
+            </div>
+
+
+            <div id = "image" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_AC.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image2" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_Fan_lights.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image3" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_security_camera.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image4" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_Curtain.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image5" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_Temp.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image6" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_Gas1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image7" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/1.mp4" type="video/mp4">
+               </video>
+            </div>
+
+
+            <div id = "image8" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_door_window.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div id = "image9" class="imge">
+                <video autoplay muted loop>
+                    <source src="./resources/spikebot_features_Geyser.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+        </div>
+      </div>
+  
+    
+    </div>
+    <!--Library added for working responsive coords-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
+    <script>
+
+        //used for responsive coords
+
+            $(document).ready(function(e) {
+	            $('img[usemap]').rwdImageMaps();
+	
+            });
+
+        //used for hover vedio and text animation 
+      
+
+            //Ac
+
+            function upDate() {
+                const work = document.querySelector("#image")
+                work.id = "make";
+                document.getElementById("article_name").innerHTML = "AC"; 
+            }
+            function unDo() {
+                const work = document.querySelector("#make")
+                work.id = "image";
+            }
+            
+
+
+            //Switches Sensor"
+
+            function upDate2() {
+                const works = document.querySelector("#image2")
+                works.id = "make2";
+                document.getElementById("article_name").innerHTML = "Switches Sensor";
+            }
+            function unDo2() {
+                const works = document.querySelector("#make2")
+                works.id = "image2";
+            }
+            
+
+
+            //Camera Sensor
+
+            function upDate3() {
+                const works = document.querySelector("#image3")
+                works.id = "make3";
+                document.getElementById("article_name").innerHTML = "Camera Sensor";
+            }
+            function unDo3() {
+                const works = document.querySelector("#make3")
+                works.id = "image3";
+            }
+
+
+
+            //Curtain Sensor
+
+            function upDate4() {
+                const works = document.querySelector("#image4")
+                works.id = "make4";
+                document.getElementById("article_name").innerHTML = "Curtain Sensor";
+            }
+            function unDo4() {
+                const works = document.querySelector("#make4")
+                works.id = "image4";
+            }
+
+
+
+            //Temperature Sensor
+
+            function upDate5() {
+                const works = document.querySelector("#image5")
+                works.id = "make5";
+                document.getElementById("article_name").innerHTML = "Temperature Sensor";
+            }
+
+
+            function unDo5() {
+                const works = document.querySelector("#make5")
+                works.id = "image5";
+            }
+
+
+
+            //Gas Sensor
+
+            function upDate6() {
+                const works = document.querySelector("#image6")
+                works.id = "make6";
+                document.getElementById("article_name").innerHTML = "Gas Sensor";
+            }
+            function unDo6() {
+                const works = document.querySelector("#make6")
+                works.id = "image6";
+            }
+
+
+
+            //Switches Sensor
+
+            function upDate7() {
+                const works = document.querySelector("#image7")
+                works.id = "make7";
+                document.getElementById("article_name").innerHTML = "Switches Sensor";
+            }
+            function unDo7() {
+             const works = document.querySelector("#make7")
+                works.id = "image7";
+        
+            }
+
+
+
+            //Door Sensor
+
+            function upDate8() {
+                const works = document.querySelector("#image8")
+                works.id = "make8";
+                document.getElementById("article_name").innerHTML = "Door Sensor";
+            }
+            function unDo8() {
+                const works = document.querySelector("#make8")
+                works.id = "image8";
+            }
+
+
+
+            //Geyser
+
+            function upDate9() {
+                const works = document.querySelector("#image9")
+                works.id = "make9";
+                document.getElementById("article_name").innerHTML = "Geyser";
+            }
+            function unDo9() {
+                const works = document.querySelector("#make9")
+                works.id = "image9";
+            }
+
+    </script>
+
+</body>
+</html>
